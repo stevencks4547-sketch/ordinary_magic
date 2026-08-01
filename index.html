@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ordinary Magic | For Reva ❤️</title>
+<title>Ordinary Magic ❤️</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -16,194 +17,117 @@
 <body>
 
 
-<!-- Music -->
-
-<audio id="bgMusic" loop>
-    <source src="music/merry-go-round.mp3" type="audio/mpeg">
+<audio id="music" loop>
+<source src="./music/merry-go-round.mp3">
 </audio>
 
 
-<button class="music-button" onclick="musicControl()">
-🎵
-</button>
 
+<div class="page active">
 
-
-<!-- PAGE 1 -->
-
-<section class="page active">
-
-<div class="card">
-
-<img src="images/beach.jpg" class="photo">
-
-
-<h3>OUR STORY</h3>
-
+<img src="./images/beach.jpg">
 
 <h1>
 Ordinary Magic
 </h1>
 
-
 <p>
-A little story about the moments
-that became special.
+For Reva ❤️
 </p>
 
 
-<h2>
-For Reva ❤️
-</h2>
-
-
-<button onclick="startStory()">
+<button onclick="begin()">
 Open My Heart
 </button>
 
-
 </div>
 
-</section>
 
 
 
 
+<div class="page">
 
-
-<!-- PAGE 2 -->
-
-<section class="page">
-
-<div class="card">
-
-
-<img src="images/me.jpg" class="photo">
-
-
-<h3>CHAPTER ONE</h3>
-
+<img src="./images/me.jpg">
 
 <h1>
 About Me
 </h1>
 
-
 <p>
 BB,
-</p>
 
+<br><br>
 
-<p>
 I know I'm not perfect.
-</p>
 
+<br>
 
-<p>
 I know I make mistakes.
+
+<br><br>
+
+But you still choose me.
+
+<br><br>
+
+Thank you for staying with me.
 </p>
 
 
-<p>
-I know sometimes I am silly.
-</p>
-
-
-<p>
-But...
-</p>
-
-
-<h2>
-You still choose me.
-</h2>
-
-
-<p>
-And I will always be thankful.
-</p>
-
-
-<button onclick="nextPage()">
-Continue →
+<button onclick="next()">
+Continue
 </button>
 
 
 </div>
 
-</section>
 
 
 
 
+<div class="page">
 
-
-
-<!-- PAGE 3 -->
-
-<section class="page">
-
-<div class="card">
-
-
-<img src="images/reva.jpg" class="photo">
-
-
-<h3>CHAPTER TWO</h3>
-
+<img src="./images/reva.jpg">
 
 <h1>
-Reva
+Reva ❤️
 </h1>
 
 
 <p>
-You make ordinary days
-feel different.
+
+You make ordinary days special.
+
+<br><br>
+
+Your smile,
+
+your kindness,
+
+your little habits...
+
+<br><br>
+
+are things I treasure.
+
 </p>
 
 
-<p>
-Your smile.
-<br>
-Your kindness.
-<br>
-Your little habits.
-</p>
-
-
-<p>
-The little things you do
-are the things I treasure.
-</p>
-
-
-<button onclick="nextPage()">
-Continue →
+<button onclick="next()">
+Continue
 </button>
 
 
 </div>
 
-</section>
 
 
 
 
+<div class="page">
 
-
-
-<!-- PAGE 4 -->
-
-<section class="page">
-
-<div class="card">
-
-
-<img src="images/us.jpg" class="photo">
-
-
-<h3>CHAPTER THREE</h3>
+<img src="./images/us.jpg">
 
 
 <h1>
@@ -212,52 +136,34 @@ Thank You
 
 
 <p>
-Thank you for staying.
-</p>
 
+Thank you for choosing me.
 
-<p>
+<br><br>
+
 Thank you for being patient with me.
-</p>
 
+<br><br>
 
-<p>
-Thank you for loving me.
-</p>
+Thank You, God,
 
-
-<p>
-And thank You, God,
 for bringing you into my life.
+
 </p>
 
 
-<button onclick="nextPage()">
-Continue →
+<button onclick="next()">
+Continue
 </button>
 
 
 </div>
 
-</section>
 
 
 
 
-
-
-
-<!-- PAGE 5 -->
-
-<section class="page">
-
-
-<div class="card final">
-
-
-<h3>
-ONE LAST THING
-</h3>
+<div class="page">
 
 
 <h1>
@@ -266,48 +172,36 @@ BB ❤️
 
 
 <p>
+
 Did you notice something?
-</p>
 
+<br><br>
 
-<p>
 Recently I kept asking
 if we could call.
+
+<br><br>
+
+Actually...
+
+I wanted to ask you personally.
+
 </p>
 
 
-<p>
-The truth is...
-</p>
-
-
-<p>
-I wanted to ask you something
-personally.
-</p>
-
-
-<button onclick="nextPage()">
-Continue
+<button onclick="next()">
+One More Thing
 </button>
 
 
 </div>
 
-</section>
 
 
 
 
 
-
-
-<!-- PAGE 6 -->
-
-<section class="page">
-
-
-<div class="card final">
+<div class="page">
 
 
 <h1>
@@ -316,36 +210,29 @@ Would you go on an outing with me? ❤️
 
 
 <p>
-I don't need you to answer here.
+
+Just tell me when you are free.
+
+<br><br>
+
+Choose a day.
+
+<br><br>
+
+Let's create another memory together.
+
 </p>
 
-
-<p>
-Just let me know when you are free.
-</p>
-
-
-<p>
-Choose a day,
-and let's create another memory together.
-</p>
-
-
-<h2>
-Our Ordinary Magic
-</h2>
 
 
 </div>
 
 
-</section>
 
 
 
 
-
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 
 </body>
