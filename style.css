@@ -9,26 +9,23 @@ body{
 
     height:100vh;
 
-    overflow:hidden;
-
-    background:
-    linear-gradient(
-        180deg,
-        #171310,
-        #3b2d24
-    );
+    background:#17120f;
 
     color:white;
 
-    font-family:Georgia, serif;
+    font-family:Georgia,serif;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
 
-
-
-
-/* 星空 */
 
 body::before{
 
@@ -38,71 +35,39 @@ body::before{
 
     inset:0;
 
-
-    background-image:
+    background:
 
     radial-gradient(
-        white 1px,
-        transparent 1px
+    white 1px,
+    transparent 1px
     );
 
+    background-size:70px 70px;
 
-    background-size:80px 80px;
-
-
-    opacity:.15;
-
-
-    animation:stars 25s linear infinite;
+    opacity:0.15;
 
 }
 
 
-
-@keyframes stars{
-
-    from{
-
-        transform:translateY(0);
-
-    }
-
-
-    to{
-
-        transform:translateY(-120px);
-
-    }
-
-}
-
-
-
-
-
-
-
-/* 每一頁 */
 
 
 .page{
 
     display:none;
 
-    height:100vh;
-
     width:100%;
 
+    height:100vh;
 
     justify-content:center;
 
     align-items:center;
 
+    flex-direction:column;
 
     text-align:center;
 
-
-    padding:25px;
+    padding:30px;
 
 }
 
@@ -112,137 +77,65 @@ body::before{
 
     display:flex;
 
-    animation:fade 1.2s ease;
+    animation:show 1s ease;
 
 }
 
 
 
 
+img{
 
 
+    width:260px;
 
-.card{
-
-    max-width:650px;
-
-    width:100%;
-
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-
-
-
-
-
-
-
-/* 照片 */
-
-
-.photo{
-
-    width:280px;
-
-    height:350px;
-
+    height:330px;
 
     object-fit:cover;
+
+
+    padding:8px;
 
 
     background:white;
 
 
-    padding:10px;
-
-
     box-shadow:
 
-    0 25px 60px rgba(0,0,0,.6);
+    0 20px 50px rgba(0,0,0,.6);
 
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
-
-    animation:photoIn 1.5s ease;
 
 }
 
 
-
-
-
-
-
-
-h3{
-
-    font-size:12px;
-
-
-    letter-spacing:7px;
-
-
-    color:#d5bfa5;
-
-
-    font-family:Arial,sans-serif;
-
-
-    margin-bottom:20px;
-
-}
 
 
 
 h1{
 
-    font-size:50px;
+    font-size:45px;
 
     font-weight:400;
 
-
-    margin:15px 0;
+    margin:20px;
 
 
 }
-
-
-
-h2{
-
-    font-size:28px;
-
-    font-weight:400;
-
-
-    margin:20px 0;
-
-}
-
 
 
 
 p{
 
-    font-family:Arial,sans-serif;
+    max-width:500px;
 
+    font-family:Arial,sans-serif;
 
     font-size:18px;
 
-
-    line-height:1.9;
-
-
-    margin:10px 0;
-
+    line-height:2;
 
     color:#eee;
 
@@ -250,17 +143,10 @@ p{
 
 
 
-
-
-
-
-
-/* 按钮 */
-
-
 button{
 
-    margin-top:30px;
+
+    margin-top:35px;
 
 
     width:220px;
@@ -268,19 +154,13 @@ button{
     height:55px;
 
 
-    border-radius:40px;
+    border-radius:30px;
 
 
-    border:
-
-    1px solid rgba(255,255,255,.5);
+    border:1px solid white;
 
 
-
-    background:
-
-    rgba(255,255,255,.1);
-
+    background:transparent;
 
 
     color:white;
@@ -290,9 +170,6 @@ button{
 
 
     cursor:pointer;
-
-
-    transition:.3s;
 
 
 }
@@ -312,118 +189,15 @@ button:hover{
 
 
 
-button:active{
 
-    transform:scale(.95);
-
-}
-
-
-
-
-
-
-
-
-/* 音乐按钮 */
-
-
-.music-button{
-
-
-    position:fixed;
-
-
-    right:20px;
-
-
-    top:20px;
-
-
-    width:55px;
-
-
-    height:55px;
-
-
-    border-radius:50%;
-
-
-    margin:0;
-
-
-    padding:0;
-
-
-    z-index:99;
-
-
-}
-
-
-
-
-
-
-
-/* 最后一页 */
-
-
-.final h1{
-
-
-    text-shadow:
-
-    0 0 25px rgba(255,255,255,.8);
-
-
-    animation:glow 3s infinite alternate;
-
-}
-
-
-
-
-
-
-@keyframes glow{
-
-
-    from{
-
-        text-shadow:
-
-        0 0 10px white;
-
-    }
-
-
-    to{
-
-        text-shadow:
-
-        0 0 35px white;
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-@keyframes fade{
+@keyframes show{
 
 
     from{
 
         opacity:0;
 
-        transform:translateY(40px);
+        transform:translateY(30px);
 
     }
 
@@ -436,60 +210,26 @@ button:active{
 
     }
 
-}
-
-
-
-
-
-
-
-
-@keyframes photoIn{
-
-
-    from{
-
-        opacity:0;
-
-        transform:scale(.8);
-
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:scale(1);
-
-    }
 
 }
 
 
-
-
-
-
-
-
-
-/* 手机 */
 
 @media(max-width:600px){
 
 
-    h1{
+    img{
 
-        font-size:38px;
+        width:230px;
+
+        height:290px;
 
     }
 
 
-    h2{
+    h1{
 
-        font-size:24px;
+        font-size:36px;
 
     }
 
@@ -500,13 +240,5 @@ button:active{
 
     }
 
-
-    .photo{
-
-        width:230px;
-
-        height:290px;
-
-    }
 
 }
